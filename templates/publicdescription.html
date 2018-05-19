@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"
+          href="{{url_for('static',filename='publicdescription.css')}}">
+<style>
+textarea
+{
+font-size:30px;
+color:blue;
+resize:none;
+backgoround-color:grey;
+}
+p
+{
+font-size:20px;
+color:red;
+}
+
+
+</style>
+</head>
+{% include 'status.html' %}
+<body>
+
+<textarea rows="7" cols="40" readonly >
+   {{item.name}}:
+    {{item.description}}
+
+</textarea>
+<p><a href="{{url_for('homepage')}}">Home Page</a></p>
+</body>
+</html>

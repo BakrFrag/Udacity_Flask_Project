@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Udacity Flask Project ">
+    <link rel="stylesheet" type="text/css"
+          href="{{url_for('static',filename='newbranche.css')}}">
+</head>
+<body>
+<form method="post">
+<h1>Create New Branche</h1>
+<h3>Name:</h3>
+<input type="text" name="name" maxlength="30">
+<br><br>
+<h3>Description:</h3>
+<textarea rows="10" cols="50" name="description"></textarea>
+<br><br>
+<select name="catogrey" size="1">
+    {% for i in catogries %}
+    <option value="{{i.name}}">{{i.name}}</option>
+    {% endfor %}
+</select>
+    <br><br>
+<input type="submit" value="Create Branche">
+</form>
+</body>
+</html>

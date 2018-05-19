@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="udacity project">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{url_for('static',filename='description.css')}}" type="text/css">
+    <style>
+        textarea
+        {
+        font-size:30px;
+        color:blue;
+        resize:none;
+        }
+        p
+        {
+        font-size:20px;
+        color:red;
+    </style>
+
+</head>
+<body>
+<textarea rows="7" cols="40" readonly >
+   {{item.name}}:
+    {{item.description}}
+
+</textarea>
+<br><br>
+<p>
+    <a href="{{url_for('editBranche',id=item.id)}}">Edit</a></p>
+    <br>
+<p>
+<a href="{{url_for('deleteBranche',id=item.id)}}">Delete</a>
+</p>
+<br>
+<p>
+<a href="{{url_for('homepage')}}">Home Page</a>
+</p>
+</body>
+</html>

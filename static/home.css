@@ -1,0 +1,60 @@
+*
+{
+    box-sizing: border-box;
+}
+.container
+{
+   display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    
+    
+}
+.catogrey
+       {
+       width:50%;
+       float:left;
+        border: yellow 2px solid;
+        padding:3px 5px;
+        
+           order: 1;
+       }
+       .catogrey h1
+       {
+       color:red;
+       font-size:35px;
+       }
+       .catogrey p
+       {
+       color:blue;
+       font-size:30px;
+        padding: 5px;
+       }
+       .middle
+       {
+       clear:both;
+       }
+       .item
+       {
+       width:50%;
+       float:right;
+       border:yellow 3px double;
+           padding: 3px 5px;
+           order:2;
+           
+                  }
+       .item h1
+       {
+       color:red;
+       font-size:35px;
+       }
+       .item p
+       {
+       color:blue;
+       font-size:30px;
+       padding: 5px;
+       }
+.item a
+{
+    
+}

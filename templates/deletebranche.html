@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Udacity Flask Project">
+    <link rel="stylesheet" type="text/css"
+       href="{{url_for('static',filename='editbranche.css')}}">
+
+</head>
+<body>
+<form method="post">
+    <h1>Are You Sure To Delete {{item.name}}</h1>
+    <input type="submit" value="Delete">
+</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Udacity Flask Project">
+    <link rel="stylesheet" type="text/css"
+          href="{{url_for('static',filename='editbranche.css')}}">
+</head>
+<body>
+<form method="post">
+    <h3>Name:</h3>
+    <input type="text" maxlength="30" name="name" placeholder="{{item.name}}">
+    <br><br>
+    <h3>Description</h3>
+    <textarea rows="10" cols="50" name="description" placeholder="{{item.description}}"></textarea>
+    <br><br>
+    <h3>Catogrey</h3>
+    <select name="catogrey" size="1">
+        {% for i in catogries %}
+        <option value="{{i.name}}">{{i.name}}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <input type="submit" value="Save Changes">
+</form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+textarea
+    {
+    border:yellow 2px solid;
+    }
+    textarea h1
+    {
+    color:black;
+    font-size:30px;
+    }
+    textarea p
+    {
+    font-size:20px;
+    color:blue;
+    }

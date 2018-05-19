@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Udacity Project">
+    <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}"
+    type="text/css">
+
+</head>
+<body>
+{% include 'status.html'%}
+<div class="container">
+    <article class="catogrey">
+
+        <header><h1>Catogries</h1></header>
+        <section>
+            {% for i in catogries %}
+            <a href="{{url_for('catogrey_branches',id=i.id)}}"> <p>{{i.name}}</p></a>
+        <!--    <p>{{i.name}}</p> -->
+            {% endfor %}
+        </section>
+    </article>
+    <div class="middle"></div>
+    <aside class="item">
+
+
+        <header><h1>{{catogrey.name}}({{counter}} Items)</h1></header>
+        <section>
+            {% for i in branches %}
+
+            <a href="{{url_for('getBranchDescription',id=i.id)}}"><p>{{i.name}}</p></a>
+            {% endfor %}
+        </section>
+
+    </aside>
+    <br>
+
+</div>
+ <a href="{{url_for('homepage')}}"><p>Home Page</p></a>
+</body>
+</html>
